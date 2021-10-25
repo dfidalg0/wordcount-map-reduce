@@ -74,7 +74,7 @@ func mergeMapLocal(task *Task, mapCounter int) {
 
 		for m := 0; m < mapCounter; m++ {
 			for i := 0; i < OPEN_FILE_MAX_RETRY; i++ {
-				if file, err = os.Open(filepath.Join(REDUCE_PATH, reduceName(m, r))); err == nil {
+				if _, err = os.Open(filepath.Join(REDUCE_PATH, reduceName(m, r))); err == nil {
 					break
 				}
 				log.Printf("(%v/%v) Failed to open file %v. Retrying in 1 second...", i+1, OPEN_FILE_MAX_RETRY, filepath.Join(REDUCE_PATH, reduceName(m, r)))

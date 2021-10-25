@@ -40,7 +40,6 @@ func RunSequential(task *Task) {
 	}
 
 	close(task.OutputChan)
-	return
 }
 
 // RunMaster will start a master node on the map reduce operations.
@@ -111,7 +110,6 @@ func RunMaster(task *Task, hostname string) {
 	}
 
 	log.Println("Done.")
-	return
 }
 
 // RunWorker will run a instance of a worker. It'll initialize and then try to register with
