@@ -1,4 +1,4 @@
 bin/
-map/
-reduce/
-result/
+/map/
+/reduce/
+/result/
